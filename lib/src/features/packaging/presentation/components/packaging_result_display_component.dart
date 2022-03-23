@@ -14,9 +14,9 @@ class PackagingResultDisplay extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Text(
-            packedItems,
+            "Packed Items: $packedItems",
             style: const TextStyle(
-              fontSize: 50,
+              fontSize: 25,
               fontWeight: FontWeight.bold,
             ),
           ),
