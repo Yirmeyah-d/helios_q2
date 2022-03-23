@@ -12,7 +12,7 @@ class PackedUp {
 }
 
 class Params extends Equatable {
-  final String itemsToPack;
+  final List<int> itemsToPack;
 
   const Params({required this.itemsToPack});
 

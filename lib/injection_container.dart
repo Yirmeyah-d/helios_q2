@@ -1,5 +1,6 @@
 import 'package:get_it/get_it.dart';
 import 'package:flutter/material.dart';
+import 'package:helios_q2/src/core/utils/input_converter.dart';
 import 'package:helios_q2/src/features/packaging/data/repositories/packaging_repository_impl.dart';
 import 'package:helios_q2/src/features/packaging/domain/repositories/packaging_repository.dart';
 import 'package:helios_q2/src/features/packaging/domain/use_cases/packed_up.dart';
@@ -12,6 +13,7 @@ Future<void> init() async {
   serviceLocator.registerFactory(
     () => PackagingBloc(
       packedUp: serviceLocator(),
+      inputConverter: serviceLocator(),
     ),
   );
   // Use cases
@@ -20,6 +22,9 @@ Future<void> init() async {
   serviceLocator.registerLazySingleton<PackagingRepository>(
     () => PackagingRepositoryImpl(),
   );
+
+  //! Core
+  serviceLocator.registerLazySingleton(() => InputConverter());
 
   //! External
   WidgetsFlutterBinding.ensureInitialized();

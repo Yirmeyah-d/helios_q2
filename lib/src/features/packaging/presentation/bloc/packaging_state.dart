@@ -21,3 +21,11 @@ class PackingFinished extends PackagingState {
   @override
   List<Object> get props => [packedItems];
 }
+
+class PackingError extends PackagingState {
+  final String message;
+  const PackingError({required this.message});
+
+  @override
+  List<Object> get props => [message];
+}

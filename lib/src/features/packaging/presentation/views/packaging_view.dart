@@ -35,6 +35,20 @@ class PackagingView extends StatelessWidget {
                     return PackagingResultDisplay(
                       packedItems: state.packedItems,
                     );
+                  } else if (state is PackingError) {
+                    return Container(
+                      // Third of the size of the screen
+                      height: MediaQuery.of(context).size.height / 3,
+                      child: Center(
+                        child: SingleChildScrollView(
+                          child: Text(
+                            state.message,
+                            style: TextStyle(fontSize: 25),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                    );
                   } else {
                     return Container(
                       // Third of the size of the screen

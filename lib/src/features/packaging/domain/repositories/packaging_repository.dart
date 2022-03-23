@@ -1,3 +1,3 @@
 abstract class PackagingRepository {
-  Future<String> packedUp(String itemsToPack);
+  Future<String> packedUp(List<int> itemsToPack);
 }
