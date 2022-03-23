@@ -11,8 +11,10 @@ La chaîne d'articles à emballer est représentée par une suite de chiffres, c
 Après traitement par le robot d'emballage, la chaîne est séparée par des "/" pour représenter les articles contenus dans un carton.
 
 ## Exemple
+```
 Chaîne d'articles en entrée : 163841689525773
 Chaîne d'articles emballés : 163/8/41/6/8/9/52/5/7/73
+```
 
 L'algorithme actuel du robot d'emballage est très basique.
 Il prend les articles les uns après les autres, et les mets dans un carton.
@@ -24,6 +26,8 @@ Implémenter une application qui permettrait de maximiser le nombre d'articles p
 L'ordre des cartons et des articles n'a pas d'importance.
 
 ## Exemple
+```
 Articles : 163841689525773
 Robot actuel : 163/8/41/6/8/9/52/5/7/73 => 10 cartons utilisés
 Robot optimisé: 163/82/46/19/8/55/73/7 => 8 cartons utilisés
+```
